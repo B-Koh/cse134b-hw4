@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Brandon's Portfolio</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+    <ol>
+        <li>Java</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>JS</li>
+    </ol>
+
+    <pre>
+        Text in a pre tag
+        is preserved
+        so it 
+        will display text how I format it.
+    </pre>
+
+    <table>
+        <caption>My Skills</caption>
+        <colgroup>
+            <col span="2" style="background-color:rgb(136, 136, 136)">
+          </colgroup>
+        <tr>
+          <th>Langauges</th>
+          <th>Software</th>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>github</td>
+        </tr>
+        <tr>
+            <td><b>Java</b></td>
+            <td><i>Android Studio</i></td>
+          </tr>
+
+    </table>
+
+    <aside><p>Enter <code>Code</code> here.</p></aside>
+
+    <video width="320" height="240" controls>
+    <source src="img/rain.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+    <source src="img/rain.mp3" type="audio/mpeg">
+    </audio>
+
+    <figure>
+    <img src="img/me1.JPG" alt="Brandon" style="width:20%">
+    <figcaption><strong>Strong Caption...</strong>  <em>Emphasis part of caption...</em></figcaption>
+    </figure>
+
+    
+
+    <label for="langauga">Choose a langauge:</label>
+    <input list="langauges" id="languages" name="languages">
+
+    <datalist id="langauges">
+        <option value="Java">
+        <option value="Python">
+        <option value="C">
+        <option value="HTML/CSS">
+        <option value="javascript">
+    </datalist>
+
+
+    <label for="lang">Choose a language:</label>
+
+    <label for="lang-select">Choose a language:</label>
+
+    <select name="pets" id="pet-select">
+        <option value="">Please choose an option</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="c">C</option>
+        <option value="html/css">HTML/CSS</option>
+        <option value="js">javsascript</option>
+    </select>
+
+    <aside>
+        <select>
+                <optgroup label="My Programming Languages">
+                    <option value="C">Python</option>
+                    <option value="C++">C</option>
+                    <option value="Java">Java</option>
+                </optgroup>
+                <optgroup label="Not My Programming Language">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="PHP">PHP</option>
+                    <option value="Shell">SQL</option>
+                </optgroup>
+        </select>
+    </aside>
+
+    <hr>
+
+    <details>
+        <summary>Epcot Center</summary>
+        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+    </details>
+
+    <template id="myTemp">
+        <p>Content</p>
+    </template>
+    <div id="normalCont">
+        <p>My Template</p>
+    </div>
+    
+    <button onclick="useTemplate();">Show content</button>
+
+
+    <!-- script tag to show the use of a template-->
+    <script>
+    function useTemplate() {
+    var myTemp = document.getElementById('myTemp');
+        normalCont = document.getElementById('normalCont');
+        clonedTemp = myTemp.content.cloneNode(true);
+        normalCont.appendChild(clonedTemp);
+        }
+    </script>
+
+    <br>
+    <br>
+
+    <canvas id="canv">
+        Your browser does not support the canvas tag.
+    </canvas>
+    
+    <!-- script tag to show canvas -->
+    <script>
+    var canvas = document.getElementById("canv");
+    var cont = canvas.getContext("2d");
+    cont.fillStyle = "#FF9001";
+    cont.fillRect(10, 0, 100, 80);
+    </script>
+
+    <br>
+
+    <iframe srcdoc="<html><body><p>Hello,world.</p></body></html>"></iframe>
+
+
+
+</body>

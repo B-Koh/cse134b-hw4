@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brandon's Portfolio</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" as="style">
+
+</head>
+<body>
+
+    <header>
+
+        <a id = "logo" href="">Brandon Koh</a>
+        <nav class ="nav-area">
+            <ul class="navigation">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#Projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <button class = "dropdown">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class = "mobileNav">
+            <div class="mobileNav-container">
+                <a href="#about">About</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="about">
+           
+           
+            <picture>
+                <img src="img/me1.JPG" alt="brandon koh"> 
+            </picture>
+                
+        
+            <div>
+                <h1>Hello, I'm Brandon Koh, a Software and Web Developer</h1>
+                <h3>I'm a fourth year Computer Science major at University of California San Diego. I have a passion for learning new technical skills. I have interests in Software Engineering and Web Development.</h3>
+            </div>
+
+        </section>
+
+        <section id="Projects">
+
+            <div class = "container">
+
+               <a href="project1.html">
+                <div class = "card">
+                    <div class = "content">
+                        <h2>Birds of a Feather</h2>
+                    </div>
+                    <div class = "image">
+                        <picture>
+                            <img src = "img/feather.png" alt="Birds of a Feather">
+                        </picture>
+                    </div>
+                </div>
+               </a>
+
+               <a href="project2.html">
+                <div class = "card">
+                    <div class = "content">
+                        <h2>NYC Taxi Utiliation Analysis</h2>
+                    </div>
+                    <div class = "image">
+                      <picture>
+                        <img src = "img/taxi.webp" alt="taxi">
+                      </picture>
+                    </div>
+                </div>  
+               </a>
+
+               <a href="project3.html">
+                <div class = "card">
+                    <div class = "content">
+                        <h2>Pokemon Simulator</h2>
+                    </div>
+                    <div class = "image">
+                      <picture>
+                        <img src = "img/pokemon2.jpeg" alt="pokemon">
+                      </picture>
+                    </div>
+                </div>  
+               </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contact">
+
+        
+        <form action="http://httpbin.org/get" method="get">
+            
+            <h2> Send Me a Message Below!</h2>
+
+            <div id="form-top">
+                <!-- <label for="firName">Name:</label> -->
+                <input type="text" id="firName" name="firName" placeholder="Name">
+                <!-- <label for="email">Email:</label> -->
+                <input type="text" id="email" name="email" class="no-outline" placeholder="Email">
+            </div>
+
+            <!-- <label for="msg">Message:</label> -->
+            <textarea id="msg" rows="1" cols="50" placeholder="Message"></textarea>
+            <!-- <input\ type="msg" id="msg" name="msg"><br> -->
+            <input type="submit" value="Send" /><br>
+            
+        </form>
+        
+    
+
+        <div id="foot-icon">
+            <a href="https://www.linkedin.com/in/bkoh/"><i class="uil uil-linkedin-alt"></i></a>
+            <a href="mailto:brandonkoh99@gmail.com"><i class="uil uil-envelope"></i></a>
+            <a href="https://www.instagram.com/brandonkoh__/"><i class="uil uil-instagram"></i></a>
+            <a href="https://github.com/B-Koh"><i class="uil uil-github"></i></a>
+            <a href="img/Brandon_Resume.pdf"><i class="uil uil-file-alt"></i></a>
+        </div>
+
+
+          
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>native dialog</title>
+    <script type="text/javascript" src="/DOMPurify-main/dist/purify.min.js"></script>
+
+</head>
+<body>
+
+    <h1>Simple Dialogs</h1>
+    <button id="alert-button">Alert</button>
+    <button id="conf-button">Confirm</button>
+    
+    <button id="prompt-button">Prompt</button>
+    <!-- <output id="prompt-out"></output> -->
+    <button id="sprompt-button">Safer Prompt</button>
+    <!-- <output id="sprompt-out"></output> -->
+
+    <br>
+
+    <output id="out"></output>
+
+    <script>
+        document.getElementById("alert-button").addEventListener("click", function(){
+            alert("Alert box");
+            document.getElementById("out").innerHTML = "";
+        })
+        document.getElementById("conf-button").addEventListener("click", function(){
+            let result = confirm("Do you confirm this?");
+            document.getElementById("out").innerHTML = 'The value returned by the confirm method is: ' + result;
+         
+        })
+        document.getElementById("prompt-button").addEventListener("click", function(){
+            let prompt = window.prompt("Enter something");
+            let clean = DOMPurify.sanitize(prompt);
+            if(clean == null || clean == ""){
+                document.getElementById("out").value = "User didn’t enter anything";
+            }
+            else{
+                document.getElementById("out").value = "Prompt result: " + clean;
+            }
+        })
+        document.getElementById("sprompt-button").addEventListener("click", function(){
+            let prompt = window.prompt("Enter something");
+            let clean = DOMPurify.sanitize(prompt);
+            if(clean == null || clean == ""){
+                document.getElementById("out").value = "User didn’t enter anything";
+            }
+            else{
+                document.getElementById("out").value = `Prompt result: ${clean}`;
+            }
+        })
+
+    </script>
+
+
+
+
+</body>

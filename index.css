@@ -31,7 +31,6 @@ header{
     justify-content: space-between;
     padding: 20px 60px 20px 60px; 
     background-color: var(--back-color);
-    z-index: 1;
     margin: 0 auto;
 }
 
@@ -73,26 +72,37 @@ section{
 
 .dropdown{
     display: none;
-    position: relative;
     background: none;
     border: none;
+    width: 35px;
     cursor: pointer;
+    
     
 }
 
-.dropdown span{
+.dropdown:before, .dropdown:after{
+    content:"";
     background-color: white;
     height: 2px;
-    width: 25px;
+    width: 100%;
     margin-top: 3px;
     display: block;
-    position: relative;
     border-radius: 8px;
+    
+    
 }
 
-.dropdown.isActive span:nth-child(2){
-    transform: translateX(30px);
-    opacity: 0;
+.dropdown.isActive:before{
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.dropdown.isActive:after{
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.dropdown:hover::before, .dropdown:hover::after{
+    background-color: #24305E;
+    transition: 0.4s;
 }
 
 .mobileNav{
@@ -104,6 +114,7 @@ section{
     height: 100vh;
     width: 60%;
     transition: 0.4s;
+    z-index: 10;
 }
 
 .mobileNav-container{
@@ -131,6 +142,23 @@ section{
     left: 5%;
 }
 
+.mobile-nav-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 40%;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0%;
+    right: 100%;
+    z-index: 3;
+    transition: 0.4s;
+}
+
+.mobile-nav-overlay.isActive{
+    right: 0%;
+
+}
+
 
 #about h1{
     padding-top: 1em;
@@ -156,7 +184,7 @@ h3{
 }
   
 .card {
-    position: relative;
+    
     width : 50vw;
     height : 90vw;  
     background-color : var(--color4);
@@ -166,11 +194,12 @@ h3{
     justify-content: center;
     flex-wrap: wrap;
     border-radius : 40px;
+    z-index: 1;
 }
 
 
 .image {
-    position : relative;
+    
     width :40vw ;
     height :60vw ;
 }
@@ -310,12 +339,16 @@ h1 {
 }
 
 @media(max-width: 768px){
+    .dropdown{
+        display: block;
+    }
 
     #about{
         display: flexbox;
         flex-direction: column-reverse;
         justify-content: center;
         text-align: center;
+        align-items: center;
         
     }
 
@@ -333,7 +366,9 @@ h1 {
         display: flexbox;
         margin-top: 0;
         text-align: center;
-        background-color: cadetblue;
+    }
+    .nav-area{
+        display: none;
     }
 }
 

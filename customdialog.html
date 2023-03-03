@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>custom dialog</title>
+    <script type="text/javascript" src="/DOMPurify-main/dist/purify.min.js"></script>
+
+</head>
+<body>
+
+    <button id="alert-button">Alert</button>
+    
+
+    <button id="conf-button">Confirm</button>
+    
+    <button id="prompt-button">Prompt</button>
+
+    <br>
+    <dialog id="a-dialog"></dialog>
+
+    <output id="out"></output>
+
+    <script type ="module">
+        import { alertDialog, confDialog, prompDialog } from "./customdialog.js";
+        document.getElementById("alert-button").addEventListener("click", alertDialog);
+        document.getElementById("conf-button").addEventListener("click", confDialog);
+        document.getElementById("prompt-button").addEventListener("click", prompDialog);
+        
+    
+    </script>
+
+    <script type ="module">
+        import { styleDialog } from "./styledcustomdialogs.js";
+        styleDialog();
+
+    </script>
+
+
+
+
+
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    
+    <script src="https://kit.fontawesome.com/3033af67f8.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>Big List of Blog Posts</h1>
+    <hr>
+    <ul id="list"></ul>
+    <button id="add-blog">Add Blog</button>
+    <dialog id="dialog">
+            <form onsubmit="event.preventDefault();" id ="form">
+                <label class="label" for="ptitle">Post Title:</label>
+                <input type="text" id="ptitle" name="ptitle">
+                <label class= "label" for="pdate">Post Date:</label>
+                <input type="date" id="pdate" name="pdate">
+                <label class= "label" for="summ">Post Summary: </label>
+                <textarea id="psumm" name="summ" rows="4" cols="50"></textarea>
+            </form>
+            <div id = "button">
+                <button id="cancel">Cancel</button>
+                <button id="save">Save</button>
+            </div>
+    </dialog>
+    <dialog id="delete-dialog">
+        <p>Are you sure you want to delete?</p>
+        <button id="no">No</button>
+        <button id="yes">Yes</button>
+    </dialog>
+    
+    <script type="module">
+        import { displayDialog, onCancel, onSave, editBlog, deleteBlog } from "./blog.js";
+        document.getElementById("add-blog").addEventListener("click", displayDialog);
+        document.getElementById("cancel").addEventListener("click", onCancel);
+        document.getElementById("save").addEventListener("click", onSave);
+        window.editBlog = editBlog;
+        window.deleteBlog = deleteBlog;
+    </script>
+
+
+    
+
+
+
+
+
+</body>
